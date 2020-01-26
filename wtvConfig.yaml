@@ -1,0 +1,25 @@
+templateid:
+  - 02830
+  - 02850
+#  - 0286
+#  - 0297
+#  - 02840
+#  - 02838
+#  - 02865
+#  - 02866
+#  - 02867
+#  - 02869
+#  - 02868
+#  - 02844
+#  - 02864
+#  - 02872
+#  - 02851
+#  - 02852
+#  - 02871
+#  - 02855
+#  - 02857
+#  - 02858
+#  - 02870
+getchannels_url: http://10.25.172.1:7070/ysten-lvoms-epg/epg/getChannels.shtml
+getallday_url: http://10.25.172.1:7070/ysten-lvoms-epg/epg/getAllDayPrograms.shtml
+db: ./wtv.db
