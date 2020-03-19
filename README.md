@@ -16,9 +16,9 @@ title: wtvMonitor
 
 ## 监控值说明
 
-```
+
 | 监控值说明              | zabbix | promethues |
-| :-----                 | :----: | :----: |
+| :-----                 | :---- | :----: |
 | 频道缺失                | programs lack | -1 |
 | 频道节目单OK            | programs ok | 0 |
 | 频道节目单数据为空        | programs null | 1 |
@@ -28,7 +28,7 @@ title: wtvMonitor
 | 频道预加载节目单时间不连续 | programs future uncontinuity | 5 |
 | 频道预加载节目单时间重叠   | programs future overlap | 6 |
 | 频道今日节目单为空        | programs today miss | 7 |
-```
+
 
 
 
