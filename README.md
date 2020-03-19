@@ -10,7 +10,7 @@ title: wtvMonitor
 
 ## 架构图
 
-<img src="./images/wtvMonitor.png" alt="wtvMonitor" style="zoom:50%;" />
+<img src="./images/wtvMonitor.png" alt="wtvMonitor" style="zoom:40%;" />
 
 
 
