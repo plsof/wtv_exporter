@@ -247,7 +247,7 @@ func VerifyData(url string, id string, uuid string, offset int8, zeroTime int64,
 		}
 	} else {
 		logger.Printf("%s %s programs today miss\n", id, uuid)
-		ch <-prometheus.MustNewConstMetric(newGlobalMetric("wtv", "uuid_analysis", "The description of uuid_analysis_metric"), prometheus.GaugeValue, float64(2), id, uuid)
+		ch <-prometheus.MustNewConstMetric(newGlobalMetric("wtv", "uuid_analysis", "The description of uuid_analysis_metric"), prometheus.GaugeValue, float64(7), id, uuid)
 	}
 }
 
