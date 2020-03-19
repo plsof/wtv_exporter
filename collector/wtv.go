@@ -60,15 +60,7 @@ func (c *Metrics) Collect(ch chan<- prometheus.Metric) {
 	os.Truncate(logger.Filename, 0)
 	logger.Onfile.Seek(0, 0)
 	//解析配置文件
-	setting := func () *Wtv {
-		config, err := ioutil.ReadFile("./wtvConfig.yaml")
-		if err != nil {
-			logger.Println("解析配置yaml文件出错 err=", err)
-		}
-		var setting Wtv
-		yaml.Unmarshal(config, &setting)
-		return &setting
-	}()
+	setting := parseYaml()
 	db, err := sql.Open("sqlite3", setting.DB)
 	defer db.Close()
 	if err != nil {
@@ -147,6 +139,17 @@ type allPrograms struct {
 	PlayDate string `json:"playDate"`
 	//Programs []map[string]interface{} `json:"programs"`
 	Programs []Program `json:"programs"`
+}
+
+func parseYaml() *Wtv {
+	logger := customlogger.GetInstance()
+	config, err := ioutil.ReadFile("./wtvConfig.yaml")
+	if err != nil {
+		logger.Println("解析配置yaml文件出错 err=", err)
+	}
+	var setting Wtv
+	yaml.Unmarshal(config, &setting)
+	return &setting
 }
 
 func VerifyData(url string, id string, uuid string, offset int8, zeroTime int64, done func(), ch chan<- prometheus.Metric) {
